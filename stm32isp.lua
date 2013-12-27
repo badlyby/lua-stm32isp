@@ -12,7 +12,11 @@
 
 
 usart = require("usart")
-bit = require("bit")
+if bit32 == nil then
+  bit = require("bit")
+else
+  bit = bit32
+end
 port = nil
 
 function byte2hex(dat)
